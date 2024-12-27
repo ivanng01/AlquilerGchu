@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alquiler de Casas en Gualeguaychú</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5; /* Fondo gris claro */
+    }
+
+    .card img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .carousel img {
+      max-height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .card {
+      height: 100%;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* Estilo del modal */
+    .modal-body img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .modal-footer button {
+      margin: 0 5px;
+    }
+
+    /* #imageCarousel .carousel-item img {
+  object-fit: cover;
+  height: 400px; /* Ajusta la altura según lo que necesites 
+   } */
+
+#imageCarousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 400px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Las imágenes cubrirán el área del contenedor sin distorsionarse */
+  display: block; /* Para asegurar que las imágenes se comporten bien dentro del carrusel */
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white" href="#">Propiedades Gualeguaychú</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto fw-bold">
+          <a class="nav-link" href="#contact">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div id="property-gallery" class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-images='["/html/p1.jpg", "/html/p2.jpg", "/html/p3.jpg", "/html/p4.jpg", "/html/p5.jpg", "/html/p6.jpg", "/html/p7.jpg", "/html/p7.jpg"]'>
+          <img src="/html/300.jpg" class="card-img-top" alt="Casa en la Playa">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-house-door"></i> Departamento en Gualeguaychú</h5>
+            <p class="card-text"><i class="bi bi-house-door-fill"></i> Alquiler temporario</p>
+            <p class="card-text"><i class="bi bi-geo-alt"></i>A 2 cuadras de costanera y 5 del centro</p>
+            <p class="card-text">
+              <i class="bi bi-wifi"></i> Wifi &nbsp;
+              <i class="bi bi-snow"></i> Aire Acondicionado
+            </p>
+            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-images='["/html/pg4.jpg", "/html/pg5.jpg", "/html/pg6.jpg"]'>
+          <img src="/html/100.webp" class="card-img-top" alt="Departamento moderno">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-house-door"></i> Departamento moderno</h5>
+            <p class="card-text"><i class="bi bi-house-door-fill"></i> Alquiler temporario</p>
+            <p class="card-text"><i class="bi bi-geo-alt"></i> En el centro de Gualeguaychú</p>
+            <p class="card-text">
+              <i class="bi bi-wifi"></i> Wifi &nbsp;
+              <i class="bi bi-snow"></i> Aire Acondicionado
+            </p>
+            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-images='["/html/pg7.jpg", "/html/pg8.jpg", "/html/pg9.jpg"]'>
+          <img src="/html/500.jpg" class="card-img-top" alt="Casa en la playa">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-house-door"></i> Casa en la playa</h5>
+            <p class="card-text"><i class="bi bi-house-door-fill"></i> Alquiler temporario</p>
+            <p class="card-text"><i class="bi bi-geo-alt"></i> Cerca de la playa</p>
+            <p class="card-text">
+              <i class="bi bi-wifi"></i> Wifi &nbsp;
+              <i class="bi bi-snow"></i> Aire Acondicionado
+            </p>
+            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="propertyModalLabel">Galería de Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselImages" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselImagesContent">
+              <!-- Las imágenes se cargarán aquí dinámicamente -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Carrusel antes del Footer -->
+<div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/html/gchu1.jpg" class="d-block w-100" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu2.jpg" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu3.jpg" class="d-block w-100" alt="Imagen 3">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu4.jpg" class="d-block w-100" alt="Imagen 4">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu5.jpg" class="d-block w-100" alt="Imagen 5">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu6.jpg" class="d-block w-100" alt="Imagen 6">
+    </div>
+    <div class="carousel-item">
+      <img src="/html/gchu7.jpg" class="d-block w-100" alt="Imagen 7">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<section id="contact" class="text-center my-4">
+  <h2 class="text-black">Información de Contacto</h2>
+  <p class="bi bi-telephone-fill" style="font-size: 1.1em; color:black"> 3446638016</p>
+  <p class="bi bi-envelope-open-fill" style="font-size: 1.1em; color:black"> ivann-gonzalez@hotmail.com</p>
+</section>
+
+
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024. Propiedades Gualeguaychú. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+  <script>
+    // Seleccionar todas las tarjetas
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function () {
+        const images = JSON.parse(card.getAttribute('data-bs-images')); // Obtener las rutas de las imágenes
+        const carouselInner = document.getElementById('carouselImagesContent');
+        carouselInner.innerHTML = ''; // Limpiar el contenido del carrusel
+  
+        images.forEach((image, index) => {
+          const isActive = index === 0 ? 'active' : ''; // La primera imagen será activa
+          const div = document.createElement('div');
+          div.classList.add('carousel-item');
+          if (isActive) div.classList.add(isActive);
+  
+          const img = document.createElement('img');
+          img.src = image;
+          img.classList.add('d-block', 'w-100');
+          div.appendChild(img);
+  
+          carouselInner.appendChild(div);
+        });
+      });
+    });
+  
+    // Redirigir al cerrar el modal
+    const propertyModal = document.getElementById('propertyModal');
+    propertyModal.addEventListener('hidden.bs.modal', function () {
+      window.location.href = '/html'; // Redirige a la página principal
+    });
+  </script>
+  
+
+</body>
+</html>

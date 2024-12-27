@@ -1,0 +1,58 @@
+.masthead {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('cg.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end; /* Alinea el contenido al final (abajo) */
+    justify-content: center;
+    padding-bottom: 40px; /* Espacio opcional para el fondo */
+}
+.masthead .content {
+    text-align: center;
+    color: black;
+}
+.masthead .content h2, 
+.masthead .content p {
+    color: black;
+}
+.section-with-bg {
+    background-color: rgba(97, 66, 122, 0.8);
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+.text-black {
+    color: black;
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.divider {
+    margin: 2rem 0;
+}
+
+
+/* Reduce el tamaño de las cards */
+.small-card {
+    width: 100%; /* Mantén el ancho del 100% dentro de su columna */
+    height: 420px; /* Ajusta la altura de la card */
+}
+
+/* Ajusta el tamaño de la imagen dentro de la card */
+.card-img-top {
+    width: auto;
+    height: auto; /* Ajusta la altura de la imagen */
+    object-fit: cover;
+}
+
+/* Reduce el tamaño de los botones y márgenes */
+.small-card .card-body {
+    padding: 10px; /* Reduce el padding del cuerpo de la card */
+}
+
+.btn-sm {
+    font-size: 0.8rem; /* Botón más pequeño */
+    padding: 5px 10px; /* Tamaño del botón más compacto */
+}
