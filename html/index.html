@@ -59,6 +59,24 @@
   object-fit: cover; /* Las imágenes cubrirán el área del contenedor sin distorsionarse */
   display: block; /* Para asegurar que las imágenes se comporten bien dentro del carrusel */
 }
+
+#about {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+#about h2 {
+  font-size: 2.5rem;
+}
+
+#about img {
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
   </style>
 </head>
 
@@ -71,6 +89,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto fw-bold">
+          <a class="nav-link" href="#about">Nosotros</a>
           <a class="nav-link" href="#contact">Contacto</a>
         </div>
       </div>
@@ -82,7 +101,7 @@
       <!-- Card 1 -->
       <div class="col-md-4">
         <div class="card h-100" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-images='["assets/images/p1.jpg", "assets/images/p2.jpg", "assets/images/p3.jpg", "assets/images/p4.jpg", "assets/images/p5.jpg", "assets/images/p6.jpg", "assets/images/p7.jpg", "assets/images/p8.jpg"]'>
-          <img src="assets/images/300.jpg" class="card-img-top" alt="Casa en la Playa">
+          <img src="assets/images/300.jpg" class="card-img-top" alt="Departamento en Gualeguaychú">
           <div class="card-body">
             <h5 class="card-title"><i class="bi bi-house-door"></i> Departamento en Gualeguaychú</h5>
             <p class="card-text"><i class="bi bi-house-door-fill"></i> Alquiler temporario</p>
@@ -91,7 +110,7 @@
               <i class="bi bi-wifi"></i> Wifi &nbsp;
               <i class="bi bi-snow"></i> Aire Acondicionado
             </p>
-            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <p><i class="bi bi-house-door"></i> Tv - Gas Natural</p>
             <a href="#" class="btn btn-primary">Ver más</a>
           </div>
         </div>
@@ -100,16 +119,16 @@
       <!-- Card 2 -->
       <div class="col-md-4">
         <div class="card h-100" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-images='["/html/pg4.jpg", "/html/pg5.jpg", "/html/pg6.jpg"]'>
-          <img src="assets/images/100.webp" class="card-img-top" alt="Departamento moderno">
+          <img src="assets/images/100.webp" class="card-img-top" alt="Casa en Pueblo Belgrano">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-house-door"></i> Departamento moderno</h5>
+            <h5 class="card-title"><i class="bi bi-house-door"></i> Casa en Pueblo Belgrano</h5>
             <p class="card-text"><i class="bi bi-house-door-fill"></i> Alquiler temporario</p>
-            <p class="card-text"><i class="bi bi-geo-alt"></i> En el centro de Gualeguaychú</p>
+            <p class="card-text"><i class="bi bi-geo-alt"></i> En el centro de Pueblo Belgrano</p>
             <p class="card-text">
               <i class="bi bi-wifi"></i> Wifi &nbsp;
               <i class="bi bi-snow"></i> Aire Acondicionado
             </p>
-            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <p><i class="bi bi-house-door"></i> Patio - Tv</p>
             <a href="#" class="btn btn-primary">Ver más</a>
           </div>
         </div>
@@ -127,7 +146,7 @@
               <i class="bi bi-wifi"></i> Wifi &nbsp;
               <i class="bi bi-snow"></i> Aire Acondicionado
             </p>
-            <p><i class="bi bi-house-door"></i> Patio - Gas Natural</p>
+            <p><i class="bi bi-house-door"></i> Patio - Gas Natural - Tv</p>
             <a href="#" class="btn btn-primary">Ver más</a>
           </div>
         </div>
@@ -203,10 +222,40 @@
 </div>
 
 
+<!-- Sección About -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-4">
+      <div class="col">
+        <h2 class="fw-bold text-primary">Sobre Nosotros</h2>
+        <p class="text-muted">Conoce más acerca de nuestra misión, valores y servicios.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="assets/images/gchuabout.webp" alt="Nosotros" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h3 class="fw-bold text-dark">¿Quiénes somos?</h3>
+        <p class="text-muted">
+          Somos una empresa familiar dedicada al alquiler temporario de propiedades en Gualeguaychú, ofreciendo opciones
+          únicas y adaptadas a tus necesidades. Nuestro compromiso es brindarte una experiencia cómoda y segura.
+        </p>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check-circle-fill text-primary"></i> Amplia variedad de propiedades.</li>
+          <li><i class="bi bi-check-circle-fill text-primary"></i> Excelente servicio al cliente.</li>
+          <li><i class="bi bi-check-circle-fill text-primary"></i> Ubicaciones estratégicas.</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary mt-3">Contáctanos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="text-center my-4">
-  <h2 class="text-black">Información de Contacto</h2>
-  <p class="bi bi-telephone-fill" style="font-size: 1.1em; color:black"> 3446638016</p>
-  <p class="bi bi-envelope-open-fill" style="font-size: 1.1em; color:black"> ivann-gonzalez@hotmail.com</p>
+  <h2 class="fw-bold text-primary"> Información de Contacto</h2>
+  <p class="bi bi-telephone-fill" style="font-size: 1.1em; color:black"> 3446638016 - 3446327253</p>
+  <p class="bi bi-envelope-open-fill" style="font-size: 1.1em; color:black"> ivann-gonzalez@hotmail.com - paologonz2020@gmail.com</p>
 </section>
 
 
